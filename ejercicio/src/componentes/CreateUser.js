@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { createUser } from "../actions/Index"
 
 export default function CreateUser() {
 
@@ -13,14 +15,18 @@ export default function CreateUser() {
         setInput({
             ...input, [e.target.name]: e.target.value
         })
+      
     }
+
+    const dispatch = useDispatch()
 
     function handleOnSubmit(e) {
         e.preventDefault()
-        console.log(input.name)
-        console.log(input.lastname)
-        console.log(input.age)
-        console.log(input.city)
+        dispatch(createUser(input))
+        for (let i=0; i<e.target.length-1; i++)
+           e.target[i].value=''
+
+
     }
 
     return (
@@ -43,7 +49,9 @@ export default function CreateUser() {
                     <label>Ciuidad: </label>
                     <input type='text' name='city' onChange={handleOnChange} />
                 </div>
-                <button>Agregar</button>
+                <div>
+                    <input type='submit' value='Agregar' />
+                </div>
             </form>
         </>
     )

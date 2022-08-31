@@ -25,6 +25,8 @@ export default function CreateUser() {
         dispatch(createUser(input))
         for (let i=0; i<e.target.length-1; i++)
            e.target[i].value=''
+        console.log(e)
+        e.target[0].focus()
 
 
     }

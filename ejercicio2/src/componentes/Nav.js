@@ -4,22 +4,27 @@ export default function Nav() {
 
     return (
         <nav>
-            <ul>
+            
                 <Link to='/home'>
-                    <li>Home</li>
+                    <p>Home</p>
                 </Link>
                 <Link to='/users'>
-                    <li>Users</li>
+                    <p>Users</p>
                 </Link>
                 <Link to='/CreateUser'>
-                    <li>Create User</li>
+                    <p>Create User</p>
                 </Link>
-                <li>
+                <p>
                     <Link to='/about'>
                         About
                     </Link>
-                </li>
-            </ul>
+                </p>
+                <p>
+                    <Link to='/api'>
+                        API
+                    </Link>
+                </p>
+            
         </nav>
     )
 }

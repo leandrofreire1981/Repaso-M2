@@ -1,7 +1,8 @@
-import { CREATE_USER } from '../const'
+import { CREATE_USER, GET_USER_API } from '../const'
 
 const initialState = {
-    user: []
+    user: [],
+    detail: {}
 }
 export default function rootReducer(state = initialState, action) {
 
@@ -10,7 +11,11 @@ export default function rootReducer(state = initialState, action) {
             return {
                 ...state, user: [...state.user, action.payload]
             }
-            
+        
+        case GET_USER_API:
+            return {
+                ...state, detail: action.payload
+            }
             
     
         default:

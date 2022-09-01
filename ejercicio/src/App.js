@@ -6,10 +6,12 @@ import CreateUser from './componentes/CreateUser';
 import Users from './componentes/Users';
 import UserDetail from './componentes/UserDetalil';
 import About from './componentes/About';
+import { useState } from 'react';
 
 
 function App() {
- 
+
+
   return (
     <div className="App">
         <Nav/>

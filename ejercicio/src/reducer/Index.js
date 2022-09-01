@@ -12,7 +12,6 @@ export default function rootReducer(state = initialState, action) {
             }
         
         case DELETE_USER:
-            console.log(state.user)
             state.user.splice(action.payload, 1)
             return {
                 ...state, user: state.user

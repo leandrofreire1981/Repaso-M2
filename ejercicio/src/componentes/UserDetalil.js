@@ -3,8 +3,8 @@ import { useSelector } from "react-redux"
 
 export default function UserDetail() {
     const params = useParams()
-   
-    const user = useSelector((state) => state.user[params.id-1])
+
+    const user = useSelector((state) => state.user.find(data => data.name=params.name))
     
     return(
         <>

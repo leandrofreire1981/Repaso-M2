@@ -5,7 +5,7 @@ export default function User(props) {
     return (
         <div>
             <h3>
-                <Link to={`/users/detail/${props.id}`} >
+                <Link to={`/users/detail/${props.name}`} >
                     {props?.name} {props?.lastname}
                 </Link>
             </h3>

@@ -24,7 +24,7 @@ function App() {
         <Route exact path='/users'>
           <Users />
         </Route>
-        <Route exact path={'/users/detail/:id'}>
+        <Route exact path={'/users/detail/:name'}>
           <UserDetail />
         </Route>
         <Route exact path='/about' component={About} />

@@ -15,8 +15,8 @@ export default class Home extends Component {
     render() {
         return (
         <>
-            Aplicacion para ingresar usuarios y mostra lista y detalles de cada uno.
-            <p>Finalidad: Practicar react, router y redux </p>
+            Aplicacion para ingresar usuarios y mostra lista y detalles de cada uno y guardar en un archivo.
+            <p>Finalidad: Practicar react, router, redux y manejo de archivos </p>
         </>
         )
     }
